@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Start from here */
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #1d3557;
+}
+
+.container {
+  max-width: 1440px;
+  width: 60%;
+  /*width: 45rem;*/
+  margin: 0 auto;
+}
+
+.hero {
+  background: url("images/torshov-image.png");
+  background-size: cover;
+  height: 21em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  background: #1d3557;
+  padding: 0.01em 0.5em;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+
+.hero-tag {
+  color: #ffffff;
+  background: #457b9d;
+  font-size: 1.17rem;
+  font-weight: 500;
+  width: 50%;
+  max-width: 25em;
+  text-align: center;
+}
+
+.activities {
+  padding: 2em;
+  background: #f1faee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activities-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.activities-cards {
+  display: flex;
+  margin-top: 1.5em;
+  padding: 1em;
+  gap: 2em;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  text-align: center;
+}
+
+.activity-img {
+  border-radius: 50%;
+}
+
+.activity-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.activity-description {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.guide {
+  background: #a8dadc;
+  width: 25rem;
+  margin: 3em auto;
+  display: flex;
+  padding: 1.4em 1em;
+  border-radius: 10px;
+  justify-content: space-between;
+  text-align: center;
+  gap: 0.8em;
+  box-shadow: 0 5px black;
+}
+
+.guide-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.guide-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  /*margin: 1em 0;*/
+}
+
+.guide-intro {
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: 400;
+  /*margin: 1em;*/
+}
+
+.guide-name {
+  font-size: 1rem;
+  font-weight: 700;
+  /*padding-top: 1em;*/
+}
