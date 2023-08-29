@@ -70,8 +70,8 @@ body {
 
 .container {
   max-width: 1440px;
-  width: 60%;
-  /*width: 45rem;*/
+  /*width: 60%;*/
+  width: 45rem;
   margin: 0 auto;
 }
 
@@ -100,9 +100,9 @@ body {
   background: #457b9d;
   font-size: 1.17rem;
   font-weight: 500;
-  width: 50%;
-  max-width: 25em;
+  width: 25em;
   text-align: center;
+  border-radius: 10px;
 }
 
 .activities {
