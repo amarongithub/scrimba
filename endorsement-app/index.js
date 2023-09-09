@@ -104,7 +104,16 @@ function buildCommentsList(id, comments, to, from, likes) {
   listCountEl.textContent = likes;
   listIconEl.disabled = true;
 
+  // Check localStorage for this particular ID
+  if (localStorage.getItem(id)) {
+    listIconEl.style.pointerEvents = "none";
+    listIconEl.style.opacity = "0.5";
+  }
+
   listIconEl.addEventListener("click", function () {
+    if (localStorage.getItem(id)) {
+      return; // If the ID exists in localStorage, do nothing (icon was already clicked)
+    }
     // Get a reference to the specific endorsement you want to update
     const specificEndorsementRef = ref(database, `endorsementDB/${id}`);
 
@@ -123,6 +132,11 @@ function buildCommentsList(id, comments, to, from, likes) {
       .catch((error) => {
         console.error("Transaction failed: ", error);
       });
+    localStorage.setItem(id, true);
+
+    // Optionally disable the icon
+    listIconEl.style.pointerEvents = "none";
+    listIconEl.style.opacity = "0.5";
   });
 
   // assemble the structure
