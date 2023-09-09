@@ -20,25 +20,32 @@ const endorsementInDB = ref(database, "endorsementDB");
 const inputEndorsementContentEl = document.querySelector("#input-endorsement");
 const inputEndorsementFromEl = document.querySelector("#endorsement-from");
 const inputEndorsementToEl = document.querySelector("#endorsement-to");
-const inputLikeCommentsEl = document.querySelector(".list-count-like");
 const publishButtonEl = document.querySelector(".publish");
 const commentsEl = document.querySelector(".comments");
 
 publishButtonEl.addEventListener("click", function () {
-  let endorsementComment = inputEndorsementContentEl.value;
-  let endorsementTo = inputEndorsementToEl.value;
-  let endorsementFrom = inputEndorsementFromEl.value;
-  let endorsementLikes = 0;
+  if (
+    inputEndorsementContentEl.value === "" ||
+    inputEndorsementToEl.value === "" ||
+    inputEndorsementFromEl.value === ""
+  ) {
+    alert("All fields are mandatory.");
+  } else {
+    let endorsementComment = inputEndorsementContentEl.value;
+    let endorsementTo = inputEndorsementToEl.value;
+    let endorsementFrom = inputEndorsementFromEl.value;
+    let endorsementLikes = 0;
 
-  const dataToPush = {
-    comments: endorsementComment,
-    from: endorsementFrom,
-    to: endorsementTo,
-    likes: endorsementLikes,
-    timestamp: new Date().toISOString(),
-  };
-  push(endorsementInDB, dataToPush);
-  clearInputs();
+    const dataToPush = {
+      comments: endorsementComment,
+      from: endorsementFrom,
+      to: endorsementTo,
+      likes: endorsementLikes,
+      timestamp: new Date().toISOString(),
+    };
+    push(endorsementInDB, dataToPush);
+    clearInputs();
+  }
 });
 
 onValue(endorsementInDB, function (snapshot) {
@@ -95,6 +102,7 @@ function buildCommentsList(id, comments, to, from, likes) {
   listFromEl.textContent = from;
   listIconEl.textContent = "❤️";
   listCountEl.textContent = likes;
+  listIconEl.disabled = true;
 
   listIconEl.addEventListener("click", function () {
     // Get a reference to the specific endorsement you want to update
