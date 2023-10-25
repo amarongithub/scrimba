@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Start from here */
+body {
+  color: white;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width: 34rem;
+  margin: 0 auto;
+  display: flex;
+  background: #23252c;
+  /*height: 100vh;*/
+}
+
+.container--card {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 19rem;
+  /*align-items: center;*/
+  background: #1a1b21;
+}
+
+.header {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header--title {
+  padding-top: 1rem;
+  font-size: 1.5625rem;
+}
+
+.header--designation {
+  color: #f3bf99;
+  font-size: 0.8rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav--website {
+  display: block;
+  color: #f5f5f5;
+  font-size: 0.64rem;
+  padding: 1em;
+}
+
+.buttons {
+  width: 15rem;
+  display: flex;
+  gap: 1em;
+  padding-top: 0.75em;
+}
+
+.nav--button {
+  border: none;
+  padding: 0.75em 0.81em;
+  width: 7rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fa-envelope,
+.fa-linkedin {
+  margin-right: 0.75em;
+}
+
+.fa-linkedin {
+  color: white;
+}
+
+.nav--linkdin {
+  background: #5093e2;
+  color: #fff;
+}
+
+.main {
+  margin: 0 auto;
+  width: 15rem;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+}
+
+.main--title {
+  margin-top: 1em;
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.main--description {
+  color: #dcdcdc;
+  font-size: 0.64rem;
+}
+
+.footer {
+  background: #161619;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.fa-custom {
+  padding: 0.25em;
+  font-size: 1.5rem;
+  background: #918e9b;
+  color: #161619;
+  border-radius: 5px;
+}
